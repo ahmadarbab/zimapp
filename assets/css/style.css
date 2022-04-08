@@ -1,0 +1,240 @@
+/* ----------------------
+[Table of contents]
+ 
+01.Default CSS
+02.Preloader CSS
+03.Top Header CSS
+04.Navbar CSS
+05.Main Banner CSS
+06.Service CSS
+07.Features CSS
+08.Stats CSS
+09.Video CSS
+10.Our Team CSS
+11.Testimonial CSS
+12.Pricing CSS
+13.FAQs CSS
+14.Blogs CSS
+15.Footer CSS
+16.Page Title CSS
+17.Blogs Detail Page CSS
+18.Contact Page CSS
+
+
+ --------------------------*/
+
+
+ /*======================================
+ ============== Default CSS =============
+ ======================================== */
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'IBM Plex Sans', sans-serif;
+  overflow-x: hidden;
+}
+:root{
+    --primary: #2155be;
+    --secondary: #e7375a;
+    --gradient: linear-gradient(to right, var(--primary), var(--secondary));
+}
+ h1,h2,h3,h4,h5,h6{padding: 0; margin: 0; transition: .5s all ease; -webkit-transition: .5s all ease; -moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease;}
+ section{padding: 100px 0; overflow-x: hidden;}
+ ul{padding: 0; margin: 0;list-style: none;}
+ p{font-size: 15px; padding: 0; margin: 0; transition: .5s all ease; -webkit-transition: .5s all ease; -moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease;}
+.section-title{text-align: center; margin-bottom: 40px; margin-top: -6px;}
+.section-title h2{font-size: 35px; font-weight: bold;}
+.section-title span{font-size: bold; color: var(--secondary);}
+.section-title p{font-weight: 500; font-size: 14px; font-style: italic; color: var(--primary); color: #003192;}
+ a{text-decoration: none; font-size: 15px; color: #000; transition: .5s all ease; -webkit-transition: .5s all ease; -moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease;}
+ a:hover{color: #000; text-decoration: none;}
+.btn{color: var(--primary); background-color: transparent; padding: 10px 25px; border: 1px solid var(--primary); border-radius: 5px; position: relative; overflow: hidden; transition: .5s all ease; -webkit-transition: .5s all ease; -moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease;}
+.btn::before{content: ""; height: 100%; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0); background-color: var( --primary); transition: .3s all ease; -webkit-transition: .3s all ease; -moz-transition: all .3s ease; -ms-transition: all .3s ease; -o-transition: all .3s ease;}
+.btn span{position: relative;}
+.btn:focus{color: #fff;}
+.btn:focus::before{transform: translate(-50%, -50%) scale(1);}
+.btn:hover{color: #fff;}
+.btn:hover::before{transform: translate(-50%, -50%) scale(1);}
+.pb-70{padding-bottom: 70px;}
+.pb-50{padding-bottom: 50px;}
+.mb-30{margin-bottom: 30px;}
+.mb-50{margin-bottom: 50px;}
+.color-black{color: #000!important;}
+.color-white{color: #fff!important;}
+.color-primary{color: var(--primary)!important;}
+.color-secondary{color: var(--secondary)!important;}
+.dark{filter: brightness(70%);}
+.fw-500{font-weight: 500;}
+.fw-600{font-weight: 600;}
+.fs-18{font-size: 18px;}
+.fs-16{font-size: 16px;}
+.fs-15{font-size: 15px;}
+.fs-14{font-size: 14px;}
+.form-icon{position: absolute; top: 12px; right: 10px; background: none; border: none;}
+.uppercase{text-transform: uppercase;}
+.underline{text-decoration: underline;}
+.italic{font-style: italic;}
+.align{align-self: center;}
+.relative{position: relative;}
+.no-overflow{overflow: hidden;}
+ div{transition: 0.5s all ease;-webkit-transition: 0.5s all ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;}
+.form-control{height: 50px; border-radius: 5px; background: transparent;}
+.form-control:focus{border-color: var(--primary);box-shadow: 0 0 10px 0 var(--primary);}
+ textarea{height: unset!important;}
+ /*======================================
+ ============== PreLoader CSS ===========
+ ======================================== */
+.loader-wrap{position: fixed; z-index: 999999; background: #fff; width: 100%; height: 100%;}
+.loader{width: 100px; height: 100px; margin: 0 auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.loader .box{background-color: #0000000a; border: 4px solid transparent; border-left: 4px solid var(--secondary); border-top: 4px solid var(--secondary); border-radius: 50%; box-shadow: 0 0 15px #00000008; position: absolute; top: 0; left: 0; right: 0; bottom: 0; animation: animate1 3s linear infinite;}
+.loader .box:nth-of-type(2){background-color: rgba(0, 0, 0, 0.025); border: 4px solid transparent; border-right: 4px solid var(--primary); border-bottom: 4px solid var(--primary); top: 30px; left: 30px; right: 30px; bottom: 30px; animation: animate1 3s reverse linear infinite;}
+.loader .box .circle{transform-origin: left; position: absolute; top: calc(50% - 1px); left: 50%; width: 50%; height: 2px;}
+.loader .box .circle,.loader .box:nth-of-type(2) .circle{transform: rotate(-45deg);}
+.loader .box .circle:before{content: ''; background: #fff; width: 10px; height: 10px; border-radius: 50%; position: absolute; top: -4px; right: -6px;}
+.loader .box .circle:before{background: var(--secondary); box-shadow: 0 0 5px 0 var(--secondary);}
+.loader .box:nth-of-type(2) .circle:before{background: var(--primary); box-shadow: 0 0 5px 0 var(--primary);}
+@keyframes animate1{
+  0%{ transform: rotate(0deg);}
+  100%{ transform: rotate(360deg);}
+}
+ /*======================================
+ =============== Navbar CSS =============
+ ======================================== */
+ .navbar-brand{width: 180px; margin-right: 50px;}
+ .nav-item{margin: 0 8px;}
+ .nav-link{color: #000!important; font-weight: 600;}
+ .navbar-toggler{outline: none!important; box-shadow: none!important;}
+ .sticky{background-color: #fff; box-shadow: 0 0 5px 0 #5467de78; transition: .3s all ease; -webkit-transition: .3s all ease; -moz-transition: all .3s ease; -ms-transition: all .3s ease; -o-transition: all .3s ease;}
+ /*======================================
+ ============= Main Banner CSS ==========
+ ======================================== */
+ #main-banner{padding-top: 150px;}
+ .main-banner-heading{font-weight: bold; font-size: 52px; margin: 10px 0;}
+ .main-banner-btn1::before{background-color: #003192;}
+ .main-banner-btn2{color: #fff;}
+ .main-banner-btn2::before{background-color: #003192; transform: translate(-50%,-50%) scale(1);}
+ .main-banner-img{text-align: center; position: relative; overflow: hidden;}
+ .main-banner-img::before{content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(to right, var(--primary), var(--secondary)); height: 90%; width: 90%; border-radius: 100%;}
+/*======================================
+ =============== Service CSS ===========
+ ======================================== */
+ .service-box{user-select: none; text-align: center; background-color: #fff; padding: 40px 10px; border-radius: 5px;}
+ .service-box:hover{transform: translateY(-10px); box-shadow: 0px 38px 56px 2px #2b70fa49;}
+ .service-icon{color: #fff; display: inline-block; background-color: var(--primary); font-size: 22px; padding: 20px 24px; border-radius: 5px; box-shadow: 0 0 2px 0 var(--primary);}
+ .service-icon2{background-color: var(--secondary);}
+ .service-box2:hover{box-shadow: 0px 38px 56px 2px #e7375a3f;}
+ /*======================================
+ =============== Features CSS ===========
+ ======================================== */
+ .features-box{display: flex; align-items: baseline;}
+ .features-txt{margin-left: 10px;}
+ .features-txt h5{font-weight: bold; margin-bottom: 10px;}
+ /*======================================
+ ================ Stats CSS =============
+ ======================================== */
+ .stat-box{position: relative; border-radius: 5px; width: 90%; margin: 0 auto; top: 50px; background-color: #fff; text-align: center; padding: 60px 10px; box-shadow: 0px 30px 40px 0px #0029391a;}
+ .stat-box i{font-size: 50px; margin-bottom: 10px;}
+ .stat-box-bg{margin-bottom: 100px; height: 50%; width: 100%; background-color: #2155be8f; border-radius: 5px;}
+ .stat-box-bg2{background-color: #e7375a8f;}
+ 
+/*======================================
+ =============== Video CSS =============
+ ======================================= */
+ .video-btn{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: var(--secondary)!important; display: block; font-size: 18px; background-color: #fff; border-radius: 100%; height: 70px; width: 70px; line-height: 71px; padding-left: 4px;}
+ #video .owl-theme .owl-nav {margin-top: 10px; width: fit-content; margin-left: auto;}
+ #video .owl-carousel .owl-nav button{background-color: white; border: 1px solid #e8e8e8; height: 50px; width: 50px; border-radius: 100%; transition: 0.5s all ease;-webkit-transition: 0.5s all ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;}
+ #video .owl-carousel .owl-nav button span{font-size: 30px;  line-height: 30px;}
+ #video .owl-carousel .owl-nav button:hover{background-color: var(--primary); color: #fff;}
+ .video-btn::before{position: absolute; content: ''; left: 0; top: 0; height: 100%; width: 100%; border: 1px solid #fff; border-radius: 50%; animation: linear infinite popup 1.5s;}
+ @keyframes popup {
+  0% {transform: scale(1); opacity: 1; }
+  25% {transform: scale(1.1); opacity: 0.8; }
+  50% {transform: scale(1.2); opacity: 0.6;}
+  75% {transform: scale(1.3); opacity: 0.4;}
+  100% {transform: scale(1.4); opacity: 0;} 
+  }
+ /*======================================
+ ============== Our Team CSS ===========
+ ======================================= */
+ .team-box{position: relative;overflow: hidden;}
+ .team-text-area{position: relative;margin-top: -55px;background-color: #fff;padding: 20px;border: 1px solid #f1f1f1;}
+ .team-name{margin-top: 55px;}
+ .team-img img{border-radius: 50%;width: 120px;transition: .5s all ease;-webkit-transition: .5s all ease;border: 4px solid #fff;padding: 5px;position: relative;z-index: 1;}
+ .team-social{display: inline-block;position: absolute;bottom: 0;right: -50px;background: linear-gradient(to bottom, var(--secondary), var(--primary));padding: 10px;height: 100%;text-align: center;}
+ .team-social li{line-height: 45px;}
+ .team-social li a{color: #fff;}
+ .team-box:hover .team-img img{transform: scale(0.9);border-color: var(--primary);}
+ .team-box:hover .team-social{right: 0;}
+ /*======================================
+ =========== Testimonial CSS ===========
+ ======================================= */
+ .testimonial-box{background-color: #fff;padding: 60px 20px 55px 20px;position: relative;overflow: hidden;border: 2px solid #f1f1f1;border-radius: 5px;}
+ .testimonial-box span{position: absolute;top: 10px;left: 13px;font-size: 26px;color: var(--primary);}
+ .testimnial-text-area .btn{color: var(--primary); border-color: var(--primary);}
+ .testimnial-text-area .btn:hover{color: #fff; background-color: var(--primary);}
+ .testimonial-img{display: inline-block; border: 4px solid white; border-radius: 50%; overflow: hidden; z-index: 1; position: relative;}
+ .testimonial-img img{width: 80px!important;}
+ .testimonial-name p{font-size: 13px;font-weight: 600; background: var(--primary); display: inline-block; color: #fff; padding: 0 10px;}
+/*======================================
+ ============= Pricing CSS =============
+ ======================================= */
+ .pricing-box{padding: 60px 40px; margin-bottom: 30px; box-shadow: 0 3px 20px -2px #142d641a; background: #fff; border-radius: 5px; border-top: 4px solid var(--primary);}
+ .pricing-box h3 {font-weight: bold; margin-bottom: 15px; font-size: 20px; color: var(--primary);}
+ .pricing-box h4 {font-size: 48px; color: var(--primary); font-weight: bold; margin-bottom: 25px;}
+ .pricing-box h4 span {color:var(--primary); font-size: 18px; display: block; font-weight: normal;}
+ .pricing-box ul {padding: 20px 0; list-style: none; color: #999; text-align: left; line-height: 20px;}
+ .pricing-box ul li {padding: 10px 0 10px 0px; position: relative;}
+ .pricing-box ul li i{color: var(--primary);}
+ .pricing-box-featured .btn{background-color: var(--primary); color: #fff;}
+ /*=====================================
+ ================ FAQs CSS =============
+ ======================================= */
+ .faq-box{border: 1px solid #e9e9e9; padding: 10px 20px; position: relative; margin-bottom: 15px;}
+ .faq-box a{display: block; font-weight: 600;}
+ .faq-box p{margin-top: 10px;}
+ .faq-box i{position: absolute; top: 14px; right: 20px;}
+ .faq-box a::after{font-family: "Font Awesome 5 Pro"; content: "\f0d7"; position: absolute; right: 15px; transition: .3s all ease; -webkit-transition: .3s all ease; -moz-transition: all .3s ease; -ms-transition: all .3s ease; -o-transition: all .3s ease;}
+ .faq-box a:not(.collapsed)::after{transform: rotate(180deg);}
+ /*======================================
+ ================ Blogs CSS ===========
+ ======================================= */
+ .blog{margin-bottom: 30px; background-color: #fff; border: 1px solid #dcdcdc; border-radius: 5px; overflow: hidden;}
+ .blog:hover{transform: translateY(-10px); box-shadow: 0px 38px 56px 2px #e7375a2a;}
+ .blog-heading{font-size: 16px; font-weight: bold; display: block;}
+ .blog-timedate span{font-size: 12px; color: #8d8d8d;}
+ .grid-pagination a{font-size: 14px; font-weight: 600; background-color: var(--primary); padding: 8px 12px; border-radius: 5px; color: #fff; margin-right: 10px;}
+/*======================================
+ =============== Footer CSS =============
+ ======================================== */
+  footer{padding-top: 50px;}
+ .footer-logo{width: 180px;}
+ .footer-box{margin-bottom: 50px;}
+ .footer-social-icons a{background-color: #fff; height: 40px; display: inline-block; width: 40px; text-align: center; line-height: 40px; font-size: 15px; border-radius: 5px; margin-right: 5px;}
+ .footer-social-icons a:hover{background-color: var(--primary); color: #fff;}
+ .footer-list li{line-height: 30px;}
+ .footer-contact-list li{position: relative;}
+ .footer-contact-list li i{position: absolute; left: 0; top: 0; color: var(--primary);}
+ .footer-contact-list li a{padding-left: 30px;}
+ .lower-footer{border-top: 1px solid #e8e8e8; padding: 10px 0; text-align: center;}
+ /*======================================
+ ============ Page Title CSS ============
+ ======================================== */
+ .page-title{position: relative; margin-bottom: 100px; padding: 180px 0 80px 0; color: #fff; background-image: url(../images/page-title-bg.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;}
+ .page-title::before{content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #000000ab;}
+ /*======================================
+ ======== Blogs Detail Page CSS ========
+ ======================================= */
+ .blogs-detail-highlighted-box{border-left: 4px solid #000; padding: 40px 25px; position: relative; overflow: hidden;} 
+ .blogs-detail-panel-heading{position: relative; display: inline-block; margin-bottom: 30px;}
+ .blogs-detail-panel-list a{text-transform: uppercase; line-height: 35px; position: relative; padding-bottom: 5px;}
+ .blogs-detail-tags ul li{display: inline; margin: 5px; line-height: 40px;}
+ .blogs-detail-tags a{background-color: var(--secondary); color: #fff; font-size: 12px; padding: 5px 20px; font-weight: 600;}
+ .blogs-detail-posts .left-box{width: 200px; margin-right: 10px;}
+ .popular-post-title{line-height: 25px; font-size: 18px;}
+ /*======================================
+ ============== Contact Page CSS ========
+ ======================================= */
+ .contact-form .form-group{position: relative; margin-bottom: 30px;}
+ .contact-form .form-group .form-icon{top: 18px;}
+ #yes{display: none; background-color: #dfdfdf7a; font-size: 15px; font-weight: bold; text-align: center; padding: 10px 0; margin-top: 25px; border-radius: 5px; color: var(--secondary);}

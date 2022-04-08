@@ -1,0 +1,128 @@
+:root{
+    scroll-behavior: initial;
+}
+body{
+    position: relative;
+}   
+a{
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+}
+li{
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+}
+h3{
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+h3::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 90%;
+    background-color: #b80000;
+}
+.ps-10{
+    padding-left: 80px!important;
+}
+.main-title{
+    padding: 70px 0;
+    text-align: center;
+    background-color: #e8e8e8;
+}
+.navbar-light .navbar-toggler{
+    border: none;
+    font-size: 25px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-bottom-right-radius: 50%;
+    box-shadow: 0 0 5px 0 #838383;
+}
+.navbar-light .navbar-toggler:focus{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px 0 #838383;
+}
+.navbar-nav .nav-link{
+    font-weight: 600;
+}
+.navbar-nav li{
+    line-height: 30px;
+    padding-left: 20px;
+}
+.offcanvas-start{
+    width: 100%;
+}
+.html-structure{
+    background-color: #f1f1f1;
+    padding: 30px;
+}
+.html-structure li{
+    list-style-type: decimal;
+    color: #006699;
+    font-size: 14px;
+    border-left: 2px solid #006699;
+    padding-left: 20px;
+}
+.body-content li{
+    padding-left: 50px;
+}
+.comment{
+    color: #00882d!important;
+    font-size: 12px!important;
+    padding-left: 50px!important;
+}
+code{
+    color: #0000ff;
+}
+.highlight{
+    color: #f30000;
+    background-color: #ececec;
+    padding: 0 5px;
+}
+.css-structure{
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-left: 4px solid #006699;
+}
+.settings-list{
+    background-color: #f1f1f1;
+    padding: 30px;
+}
+.settings-list li{
+    list-style-type: decimal;
+    color: #006699;
+    font-size: 14px;
+    border-left: 2px solid #006699;
+    padding-left: 20px;
+}
+@media only screen and (min-width:992px){
+    .navbar-container{
+        background-color: #f8f9fa;
+    }
+    .sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    :root{
+        scroll-behavior: smooth;
+    }
+}
+@media only screen and (min-width:768px){
+    .html-structure{width: 80%;}
+    .css-structure{width: 80%;}
+    .settings-list{width: 80%;}
+}
